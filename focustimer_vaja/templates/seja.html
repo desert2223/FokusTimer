@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <title>Seja fokusa | FocusForest</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" href="/static/images/falicon.svg" type="image/x-icon">
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #2e7d32;
+            background-color: #f0f9f5;
+        }
+        #timer {
+            font-size: 80px;
+            margin-top: 20vh;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="timer">25:00</h1>
+
+    <script>
+        let duration = 25 * 60; // 25 minut
+        const display = document.getElementById("timer");
+
+        function startTimer() {
+            let timer = duration;
+            const interval = setInterval(() => {
+                const minutes = Math.floor(timer / 60);
+                const seconds = timer % 60;
+                display.textContent =
+                    `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+                if (timer > 0) {
+                    timer--;
+                } else {
+                    clearInterval(interval);
+                    window.location.href = "/konec"; // gre na konec
+                }
+            }, 1000);
+        }
+
+        window.onload = startTimer;
+    </script>
+</body>
+</html>

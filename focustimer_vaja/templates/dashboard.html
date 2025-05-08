@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <title>Nadzorna plošča</title>
+    <link rel="icon" href="/static/images/falicon.svg" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: orange;
+            padding-top: 52px;
+            overflow: hidden;
+            align-items: center;
+        }
+
+
+        .container {
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 30px;
+            margin: 40px auto;
+            border-radius: 15px;
+            border: 4px solid #000;
+            box-shadow: 14px 14px 0px 0px black;
+            max-width: 500px;
+            box-sizing: border-box;
+            z-index: 1;
+        }
+
+        .navbar {
+            background-color: orange;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px; 
+            box-sizing: border-box; 
+        }
+       
+
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-center {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2b7a2b;
+        }
+
+        .navbar input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .navbar button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #2b7a2b;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .navbar button:hover {
+            background-color: #256d25;
+        }
+        #rezultati {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            max-height: 150px;
+            overflow-y: auto;
+            width: 200px;
+            background: white;
+            position: absolute;
+            z-index: 1000;
+        }
+
+        #rezultati li {
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+        }
+
+        #rezultati li:hover {
+            background-color: #f0f0f0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="nav-left">
+            <div class="iskanje-prijateljev">
+                <form action="/iskanje_prijateljev" method="post">
+                    <input type="text" name="nickname" required>
+                    <button type="submit">Išči</button>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="nav-center">
+                <span>FokusTimer</span> 
+        </div>
+
+        <div class="nav-right">
+            <button>Prijatelji</button>
+            <button>Profil</button>
+
+            <form action="/odjava" method="get" style="display: inline;">
+                <button type="submit">Odjava</button>
+            </form>
+
+            <form action="/izbris" method="post" style="display: inline;" onsubmit="return confirm('Ali si prepričan?');">
+                <button type="submit">Izbriši račun</button>
+            </form>
+        </div>
+    </div>
+        <table rows="3">
+            <tr>
+                <th></th>
+                <th>
+                    <div class="container">
+                        <span><strong>Skupni čas v fokusu:</strong> {{ skupni_cas }} minut</span>
+                        <span><strong>Število sej:</strong> {{ st_sej }}</span>
+                        <sapn><strong>Zadnja seja:</strong> {{ zadnja }}</span>
+                    </div>
+                </th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><div class="container">Зліва</div></td>
+                <td></td>
+                <td><div class="container">Справа</div></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <div class="container ">
+                        <a href="/seja">Začni novo sejo</a></span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    
+    
+
+   
+</body>
+</html>

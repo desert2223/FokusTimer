@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/static/images/falicon.svg" type="image/x-icon">
+    <title>Prijava | FocusForest</title>
+    <link rel="stylesheet" href="/static/styles.css">
+
+</head>
+<body>
+    <div class="container color">
+        <div class="name_container _1">
+            <div class="name_container_name name" ><span>FocusTimer</span></div>
+          </div>
+
+        {% if napaka %}
+            <p style="color: red;">{{ napaka }}</p>
+        {% endif %}
+
+        <form action="/prijava" method="post">
+            <label for="email">E-pošta:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="geslo">Geslo:</label>
+            <input type="password" id="geslo" name="geslo" required>
+            <button type="submit">Prijavi se</button>
+        </form>
+        <p class="register-link">Nimaš računa? <a href="/registracija">Registriraj se tukaj</a></p>
+    </div>
+</body>
+</html>
