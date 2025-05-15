@@ -1,0 +1,126 @@
+
+/* Osnovni stil */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    background-color: orange;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+input:focus {
+    border-color: #4caf50;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+
+.container h1 {
+    color: #2e7d32;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.container form {
+    width: 100%;
+}
+
+.container label {
+    display: block;
+    text-align: left;
+    margin: 15px 0 5px;
+    color: #333;
+    font-weight: 500;
+}
+
+.container input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.container button:hover {
+    background-color: #3d8b40;
+}
+
+.container .register-link {
+    margin-top: 20px;
+    color: #555;
+}
+
+.container .register-link a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.container .register-link a:hover {
+    text-decoration: underline;
+}
+
+.name_container{
+    display:block;
+    height:6em;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    width:100%;
+  }
+  
+  .name_container_name{
+    font-size:3.5em;
+    font-weight:900;
+    color:var(--secondary_color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .color{
+    --primary_color:#1bd069;
+    --secondary_color:#e7960a;
+    --third_color:#333;
+  }
+  .name_container._1 .name_container_name{
+    color:var(--primary_color);
+    filter:drop-shadow(6px 6px 0px var(--secondary_color))
+    drop-shadow(6px 6px 0px var(--third_color));
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .session-container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.timer {
+    font-size: 3rem;
+    margin: 20px 0;
+    color: #2e7d32;
+}

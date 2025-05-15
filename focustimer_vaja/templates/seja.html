@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <title>Seja fokusa | FocusTimer</title>
+    <link rel="icon" href="/static/images/falicon.svg" type="image/x-icon">
+    <style>
+        :root {
+            --black: #000;
+            --card-color: #ffffff;
+        }
+        body {
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f9f5;
+        }
+        #timer {
+            font-size: 80px;
+            font-weight: bold;
+            color: #222;
+        }
+        h1 {
+            color: green;
+            font-size: 40px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        h2 {
+            color: #2b7a2b;
+            font-size: 30px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .container {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 30px;
+            margin: 10px auto 0 auto;
+            border-radius: 15px;
+            border: 4px solid var(--black);
+            box-shadow: 14px 14px 0px 0px var(--black);
+            width: 100%;
+            max-width: 450px;
+            height: 400px;
+            box-sizing: border-box;
+            text-align: center;
+            z-index: 1;
+        }
+        .container2 {
+            background-color: #e53935;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 30px;
+            margin: 20px auto 0 auto;
+            border-radius: 15px;
+            border: 4px solid var(--black);
+            box-shadow: 14px 14px 0px 0px var(--black);
+            width: 100%;
+            max-width: 150px;
+            height: 75px;
+            box-sizing: border-box;
+            text-align: center;
+            z-index: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <button onclick="window.location.href='/konec';" 
+        style="position:fixed;top:10px;right:10px;width:40px;height:40px;opacity:0;z-index:2000;border:none;background:none;cursor:pointer;">
+        Завершити
+    </button>
+
+    <div class="container">
+        <h2>Osredotočimo se na svojo nalogo</h1>
+    <h1 id="timer">25:00</h1>
+
+    <script>
+        let duration = 25 * 60; // 25 minut
+        const display = document.getElementById("timer");
+
+        function startTimer() {
+            let timer = duration;
+            const interval = setInterval(() => {
+                const minutes = Math.floor(timer / 60);
+                const seconds = timer % 60;
+                display.textContent =
+                    `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+                if (timer > 0) {
+                    timer--;
+                } else {
+                    clearInterval(interval);
+                    window.location.href = "/konec"; // gre na konec
+                }
+            }, 1000);
+        }
+
+        window.onload = startTimer;
+    </script>
+    </div>
+
+    <!-- To je zgeneriral chat gbt -->
+    <div class="container2">
+        <button id="endBtn" style="background:none;border:none;color:#fff;font-size:14px;cursor:pointer;">Predčasno končaj</button>
+    </div>
+
+    <!-- In to tud zgenerilal chat gbt -->
+    <div id="confirmModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.4);align-items:center;justify-content:center;z-index:999;">
+        <div style="background:#fff;padding:30px 20px;border-radius:12px;max-width:320px;margin:auto;text-align:center;">
+            <p>Ali res želiš predčasno končati sejo?</p>
+            <button id="confirmYes" style="margin:10px 5px;padding:8px 18px;background:#e53935;color:#fff;border:none;border-radius:6px;cursor:pointer;">Da</button>
+            <button id="confirmNo" style="margin:10px 5px;padding:8px 18px;background:#2b7a2b;color:#fff;border:none;border-radius:6px;cursor:pointer;">Ne</button>
+        </div>
+    </div>
+
+        <!-- In to tud zgenerilal chat gbt -->
+        <div id="infoModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.4);align-items:center;justify-content:center;z-index:999;">
+            <div style="background:#fff;padding:30px 20px;border-radius:12px;max-width:320px;margin:auto;text-align:center;">
+                <p>Nič hudega! Naslednjič ti bo zagotovo uspelo!</p>
+                <a href="/preklicana_seja" style="display:inline-block;margin-top:15px;padding:10px 22px;background:#2b7a2b;color:#fff;border-radius:6px;text-decoration:none;">Do dashborda</a>
+            </div>
+        </div>
+
+        <!-- In to tud zgenerilal chat gbt -->
+    <script>
+        document.getElementById('endBtn').onclick = function    () {
+            document.getElementById('confirmModal').style.display = 'flex';
+            };
+        document.getElementById('confirmNo').onclick = function() {
+            document.getElementById('confirmModal').style.display = 'none';
+            };
+        document.getElementById('confirmYes').onclick =     function() {
+            document.getElementById('confirmModal').style.display = 'none';
+            document.getElementById('infoModal').style.display = 'flex';
+        };
+</script>
+</body>
+</html>
