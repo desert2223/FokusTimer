@@ -1,6 +1,6 @@
 # FokusTimer
 	 Namen in cilji projektne naloge
-FocusForest je spletna aplikacija, namenjena uporabnikom, ki si želijo povečati svojo produktivnost, zmanjšati prokrastinacijo in izboljšati fokus pri študiju ali delu. Aplikacija ponuja osebno statistiko, sistem sledenja sej osredotočenosti, in motivacijsko gamifikacijo v obliki rasti virtualnega drevesa.
+FocusForest je spletna aplikacija, namenjena uporabnikom, ki si želijo povečati svojo produktivnost, zmanjšati prokrastinacijo in izboljšati fokus pri študiju ali delu. Aplikacija ponuja osebno statistiko, sistem sledenja sej osredotočenosti.
 
 Cilji projektne naloge:
  -Razviti uporabniku prijazno spletno aplikacijo za sledenje produktivnosti.
@@ -11,9 +11,9 @@ Cilji projektne naloge:
 
  	Zakaj je to vaša priložnost?
 
-V svetu, kjer je pozornost ena najbolj dragocenih dobrin, FocusForest odgovarja na naraščajočo potrebo po digitalnih rešitvah za obvladovanje časa in fokusa. Ljudje vsakodnevno iščejo orodja, ki jim pomagajo izboljšati koncentracijo, še posebej v času učenja ali dela na daljavo.
+V svetu, kjer je pozornost ena najbolj dragocenih dobrin, FocusTimer odgovarja na naraščajočo potrebo po digitalnih rešitvah za obvladovanje časa in fokusa. Ljudje vsakodnevno iščejo orodja, ki jim pomagajo izboljšati koncentracijo, še posebej v času učenja ali dela na daljavo.
 
-FocusForest ni zgolj aplikacija za merjenje časa – je celovita motivacijska izkušnja, ki uporabnika vodi skozi lastni napredek. Potencial za rast je ogromen, še posebej med študenti, freelancerji in mladimi strokovnjaki.
+FocusTimer ni zgolj aplikacija za merjenje časa – je celovita motivacijska izkušnja, ki uporabnika vodi skozi lastni napredek. Potencial za rast je ogromen, še posebej med študenti, freelancerji in mladimi strokovnjaki.
 
   	Identifikacija problema in opis rešitve
 
@@ -23,10 +23,9 @@ Problem:
  -Manjka občutek napredka in družbene povezanosti.
 
 Rešitev:
- -FocusForest s preprostim in estetskim vmesnikom omogoča začetek “fokus seje” z enim klikom.
+ -FocusTimer s preprostim in estetskim vmesnikom omogoča začetek “fokus seje” z enim klikom.
  -Statistika uporabniku pokaže napredek (število sej, skupni čas, zadnja aktivnost).
  -Dodajanje prijateljev spodbuja družbeno odgovornost brez nujnosti skupne aktivnosti.
- -Sistem rasti drevesa vizualno nagradi napor in napredek.
 
  Analiza trga
 Ciljna skupina:
