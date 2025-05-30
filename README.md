@@ -1,6 +1,6 @@
 # FokusTimer
 	 Namen in cilji projektne naloge
-FocusForest je spletna aplikacija, namenjena uporabnikom, ki si želijo povečati svojo produktivnost, zmanjšati prokrastinacijo in izboljšati fokus pri študiju ali delu. Aplikacija ponuja osebno statistiko, sistem sledenja sej osredotočenosti.
+FocusTorest je spletna aplikacija, namenjena uporabnikom, ki si želijo povečati svojo produktivnost, zmanjšati prokrastinacijo in izboljšati fokus pri študiju ali delu. Aplikacija ponuja osebno statistiko, sistem sledenja sej osredotočenosti.
 
 Cilji projektne naloge:
  -Razviti uporabniku prijazno spletno aplikacijo za sledenje produktivnosti.
